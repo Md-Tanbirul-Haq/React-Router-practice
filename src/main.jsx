@@ -13,6 +13,7 @@ import Home from './Component/home.jsx';
 import Address from './Component/address.jsx';
 import User from './Component/user.jsx';
 import User_2 from './Component/user_2.jsx';
+import User_details from './Component/user_/user_details.jsx';
 
 const user_data = fetch('https://jsonplaceholder.typicode.com/users').then(response=>response.json())
 
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       </div>       
       
          },
+         {
+          path:"user/:user_Id",
+          Component: User_details
+         }
       
 
     ]
